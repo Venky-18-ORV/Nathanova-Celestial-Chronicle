@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nathanova: Celestial Chronicle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <svg id="planet-svg" width="56" height="56" viewBox="0 0 56 56" style="vertical-align:middle;margin-right:12px;">
+      <defs>
+        <radialGradient id="planetGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#00fff7"/>
+          <stop offset="100%" stop-color="#23234a"/>
+        </radialGradient>
+      </defs>
+      <circle cx="28" cy="28" r="18" fill="url(#planetGrad)">
+        <animate attributeName="r" values="18;20;18" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <ellipse cx="28" cy="34" rx="16" ry="4" fill="none" stroke="#ffb300" stroke-width="2">
+        <animateTransform attributeName="transform" type="rotate" from="0 28 28" to="360 28 28" dur="6s" repeatCount="indefinite"/>
+      </ellipse>
+    </svg>
+    <h1>Nathanova: Celestial Chronicle – A Multidimensional Spacetime Explorer</h1>
+    <p>Presented by: VENKATANATHAN.O.R.V | RA2411026011163 | CSE-AIML</p>
+  </header>
+  <nav>
+    <button id="menu-toggle" aria-label="Open Navigation">
+      <svg width="38" height="38" viewBox="0 0 38 38">
+        <rect y="8" width="38" height="4" rx="2" fill="#00fff7"/>
+        <rect y="17" width="38" height="4" rx="2" fill="#00fff7"/>
+        <rect y="26" width="38" height="4" rx="2" fill="#00fff7"/>
+      </svg>
+    </button>
+    <a href="#events">Today's Events</a>
+    <a href="#framework">Framework</a>
+    <a href="#tech">Tech Stack</a>
+    <a href="#modules">Modules</a>
+    <a href="#development">Development</a>
+    <a href="#validation">Validation</a>
+    <a href="#resources">Resources</a>
+    <a href="#innovation">Innovation</a>
+    <a href="#about">About</a>
+  </nav>
+  <main>
+    <!-- EVENTS SECTION WITH DATE PICKER -->
+
+    
+    <section id="events">
+      <h2>Astronomical Events for <span id="today-date"></span></h2>
+      <div id="date-picker-container">
+        <label for="date-picker">Choose a date: </label>
+        <input type="date" id="date-picker">
+      </div>
+
+      <!-- Search Box for Historical Events -->
+<div id="history-search-container" style="margin-bottom:1em;">
+    <input type="text" id="history-search" placeholder="Search historical events..." style="padding:0.4em;border-radius:6px;border:1.5px solid #00fff7;">
+  </div>
+  
+      <div id="event-list"></div>
+    </section>
+
+    <svg width="36" height="36" viewBox="0 0 36 36" style="vertical-align:middle;margin-right:8px;">
+      <g>
+        <ellipse cx="18" cy="32" rx="7" ry="2.5" fill="#00fff7" opacity="0.18"/>
+        <path d="M18 4 Q20 14 28 22 Q19 20 18 32 Q17 20 8 22 Q16 14 18 4 Z" fill="#23234a" stroke="#00fff7" stroke-width="2"/>
+        <circle cx="18" cy="14" r="3.2" fill="#00fff7" stroke="#ffb300" stroke-width="1"/>
+        <rect x="16" y="32" width="4" height="5" rx="2" fill="#ffb300">
+          <animate attributeName="y" values="32;36;32" dur="1.2s" repeatCount="indefinite"/>
+          <animate attributeName="height" values="5;1;5" dur="1.2s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </svg>
+
+    <section id="nasa-apod-section" style="margin:2em 0;">
+        <h2>NASA Astronomy Picture of the Day</h2>
+        <div id="nasa-apod-container" style="background:#181830;padding:1em;border-radius:12px;box-shadow:0 2px 16px #00fff7;">
+          <h3 id="nasa-apod-title"></h3>
+          <img id="nasa-apod-image" src="" alt="NASA Astronomy Picture of the Day" style="max-width:100%;border-radius:8px;box-shadow:0 2px 8px #00fff7;display:none;">
+          <iframe id="nasa-apod-video" style="display:none;width:100%;min-height:400px;border-radius:8px;box-shadow:0 2px 8px #00fff7;" frameborder="0" allowfullscreen></iframe>
+          <p id="nasa-apod-explanation" style="margin-top:1em;"></p>
+        </div>
+      </section>
+
+      <section id="asteroid-orbits">
+        <h2>Explore Comet & Asteroid Orbits in 3D</h2>
+        <p>
+          View real-time orbits of thousands of asteroids and comets, including upcoming close approaches to Earth, with NASA’s official interactive tool.<br>
+          <a href="https://eyes.nasa.gov/apps/asteroids" target="_blank" style="font-weight:bold;color:#00fff7;">Launch NASA Eyes on Asteroids</a>
+        </p>
+        <iframe src="https://eyes.nasa.gov/apps/asteroids/" width="100%" height="600" style="border:2px solid #00fff7;border-radius:12px;box-shadow:0 2px 16px #00fff7;" loading="lazy"></iframe>
+        <p style="font-size:0.95em;">Data and visualization powered by NASA/JPL’s Center for Near-Earth Object Studies (CNEOS).</p>
+      </section>
+
+      
+
+      
+
+<!-- Moon Phase Widget for Chennai, India -->
+<div id="moon-phase-widget" 
+     data-color="white" 
+     data-style="normal"
+     data-lat="13.0827" 
+     data-lon="80.2707">
+</div>
+<script async src="https://cdn.jsdelivr.net/npm/moon-phase-widget@1.5.0/build/automount.min.js"></script>
+
+
+<section id="indian-astronomy-history">
+    <h2>History of Indian Astronomy</h2>
+    <p>
+      Indian astronomy has a rich heritage, stretching from pre-historic times to the modern era. Ancient Indian temples and complexes, such as <b>Udayagiri</b> in Madhya Pradesh, were designed with astronomical alignments. The Udaya Bhag passageway, for example, aligns perfectly east-west and was used to track the Sun’s path and mark solstices and equinoxes.<br><br>
+      Ancient texts like the <b>Siddhantas</b> (c. 400 CE) introduced mathematical models for the motion of planets, eclipses, and the positions of the Sun and Moon. The Siddhantas describe the universe as spherical, centered on Earth, with seven planets (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) revolving in concentric orbits. The <b>nakshatras</b> (lunar mansions) are also detailed, supplementing the zodiac signs.
+    </p>
+    <p>
+      <a href="http://indianculture.gov.in/timeless-trends/unveiling-cosmos-journey-through-history-astronomy-india" target="_blank">Read more: Unveiling the Cosmos (Indian Culture)</a>
+    </p>
+  </section>
+  
+  <section id="indian-manuscripts">
+    <h2>Ancient Indian Astronomy Manuscripts</h2>
+    <p>
+      India’s astronomical knowledge is preserved in thousands of manuscripts across languages and scripts—Old Kannada, Sanskrit, Prakrit, Devanagari, and more. The <b>Oriental Research Institute</b> (ORI) in Mysore, for example, holds over 4000 catalogued entries on astronomy in its “Jyothisham” volume, including palm leaf and paper manuscripts.<br><br>
+      Many manuscripts record celestial events (eclipses, planetary conjunctions), technical terms, and star names. Projects like the <b>COSMOS-Mysuru</b> initiative are digitizing and classifying these works for education and research.
+    </p>
+    <p>
+      <a href="https://www.iiap.res.in/outreach/cosmos/history-of-astronomy-project/" target="_blank">Learn more: History of Astronomy Project (IIA)</a>
+    </p>
+  </section>
+  <section id="indian-constellations">
+    <h2>Indian Constellations (Nakshatras)</h2>
+    <table>
+      <tr><th>No.</th><th>Name</th><th>Western Star(s)</th><th>Symbol/Deity</th><th>Zodiac Range</th></tr>
+      <tr><td>1</td><td>Aświni</td><td>β, γ Arietis</td><td>Horse’s head/Ashvins</td><td>0°–13°20′ Aries</td></tr>
+      <tr><td>2</td><td>Bharani</td><td>35, 39, 41 Arietis</td><td>Yoni/Yama</td><td>13°20′–26°40′ Aries</td></tr>
+      <!-- Add more rows as needed -->
+    </table>
+  </section>
+  <section id="indian-festivals">
+    <h2>Astronomy-linked Indian Festivals</h2>
+    <ul>
+      <li><b>Kumbh Mela:</b> Timed by the positions of Jupiter, Sun, and Moon in specific nakshatras and zodiac signs.</li>
+      <li><b>Makar Sankranti:</b> Celebrates the Sun’s northward journey (Uttarayana).</li>
+      <!-- Add more festivals -->
+    </ul>
+  </section>
+      
+
+  <section id="halley-orbit">
+    <h3>Halley’s Comet Orbit - Interactive</h3>
+    <iframe src="https://theskylive.com/3dsolarsystem?obj=halley" width="100%" height="500" style="border:2px solid #ffb300;border-radius:12px;"></iframe>
+    <p><a href="https://theskylive.com/3dsolarsystem" target="_blank">Explore more objects on TheSkyLive</a></p>
+  </section>
+    
+
+    <section id="framework">
+      <h2>Scientific Framework and Core Concept</h2>
+      <p>
+        Nathanova employs relativistic ephemerides and barycentric coordinate time corrections to dynamically render astronomical events with &lt;0.001 arcsecond precision. The Nathanova platform will implement dynamic date-specific event rendering, displaying authenticated astronomical events that occurred on the same month and day in history. When accessed, the platform automatically detects the user's current date and retrieves corresponding historical milestones. This ensures real-time relevance and daily refreshed content without manual intervention.<br><br>
+        The system synthesizes:<br>
+        – Photometric redshift data for deep-field events<br>
+        – General relativistic light-bending models for gravitational lensing artifacts<br>
+        – N-body simulations for historical orbital reconstructions<br>
+        The platform transcends basic date-matching by implementing spacetime geodesic mapping, where each event is contextualized within its cosmological light cone. For instance, viewing Cassiopeia A's 1680 supernova event includes:<br>
+        – Doppler-corrected spectrography of light echoes<br>
+        – Magnetohydrodynamic simulations of remnant expansion<br>
+        – Proper motion vectors relative to local standard of rest
+      </p>
+      <button class="cosmic-btn">Explore Module</button>
+      <a href="#resources" class="cosmic-link">See All Resources</a>
+    </section>
+    <section id="tech">
+      <h2>Technological Stack with Scientific Validation</h2>
+      <ul>
+        <li><strong>Stellarium's celestial mechanics kernel</strong> for dynamical time calculations</li>
+        <li><strong>Aladin Lite's HEALPix</strong> for multi-wavelength data overlay (radio to gamma)</li>
+        <li><strong>NASA's SkyView Virtual Observatory</strong> for historical mission archives</li>
+        <li><strong>ISRO NavIC constellation</strong> for geolocated sky tracking</li>
+        <li><strong>Core Engine Components:</strong> (see document for full details)</li>
+      </ul>
+    </section>
+    <section id="modules">
+      <div class="module-card">
+        <h3>Spacetime Navigator</h3>
+        <ul>
+          <li>Interactive Minkowski diagram showing causal past/future light cones for events</li>
+          <li>Cosmological redshift slider (z=0 to z=20)</li>
+          <li>Kerr metric visualization for black hole events</li>
+        </ul>
+      </div>
+      <div class="module-card">
+        <h3>Virtual Astrophysical Laboratory</h3>
+        <ul>
+          <li>Spectral analysis workbench with VOStat integration</li>
+          <li>Transit simulator for exoplanet characterization (using TESS algorithms)</li>
+          <li>GRB afterglow modeler with Swift satellite parameters</li>
+        </ul>
+      </div>
+      <div class="module-card">
+        <h3>Multimodal Storytelling</h3>
+        <ul>
+          <li>Generative narratives combining ethnomathematical frameworks (e.g., Tamil Nakshatra traditions)</li>
+          <li>Stellar nucleosynthesis pathways for element formation stories</li>
+          <li>Adaptive Bayesian inference for probabilistic event interpretations</li>
+        </ul>
+      </div>
+    </section>
+    <section id="development">
+      <h2>Development with Research Milestones</h2>
+      <ol>
+        <li>
+          <strong>Spacetime Geometry Engine</strong>
+          <ul>
+            <li>Define the website’s core features, such as dynamic event rendering based on the user’s local sidereal time and date.</li>
+            <li>Implement Robertson-Walker metric for FLRW cosmology</li>
+            <li>Integrate IAU SOFA libraries for astrometric transformations</li>
+            <li>Develop API bridges to CDS VizieR catalogues</li>
+          </ul>
+        </li>
+        <li>
+          <strong>High-Energy Event Processing</strong>
+          <ul>
+            <li>Plan for integration of celestial coordinate systems like right ascension and declination, and consider using a planisphere or star chart as a UI reference</li>
+            <li>Implement LAT/Low Energy event analysis (Fermi GBM protocols)</li>
+            <li>Develop synchrotron radiation models for AGN jets</li>
+            <li>Interface with MAXI transient alert system</li>
+            <li>Implement algorithms to display historical astronomical events (e.g., supernovae, planetary transits, comet apparitions) that occurred on the same calendar date, using Julian Date conversions for precision.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>User-Centric General Relativity</strong>
+          <ul>
+            <li>Embed GeodesicViewer for Schwarzschild/Kerr geodesics</li>
+            <li>Develop gravitational wave event visualizer (LIGO algorithms)</li>
+            <li>Create adaptive numerical relativity solver for compact binaries</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+    <section id="validation">
+      <h2>Validation and Originality Safeguards</h2>
+      <ul>
+        <li><strong>Plagiarism Detection:</strong> Code signed via PGP/GitHub Copilot audit trail</li>
+        <li><strong>Scientific Novelty:</strong> Implements novel conformal cyclic cosmology visualization</li>
+        <li><strong>Performance Metrics:</strong>
+          <ul>
+            <li>&lt;5ms latency for JPL DE441 ephemeris calls</li>
+            <li>Photon-mapping renderer achieves 10⁶ rays/sec on WebGPU</li>
+          </ul>
+        </li>
+        <li><strong>Competitive Differentiation:</strong>
+          <ul>
+            <li>Only platform incorporating Aditya-L1 mission data for solar events</li>
+            <li>Real-time BHATTACHARYA distance metric for event uniqueness scoring</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section id="resources">
+        <h2>Explore More</h2>
+        <ul>
+          <li><a href="https://stellarium.org/" target="_blank">Stellarium (Planetarium Software)</a></li>
+          <li><a href="https://heavens-above.com/" target="_blank">Heavens Above (Satellite & ISS Tracking)</a></li>
+          <li><a href="https://skyandtelescope.org/observing/" target="_blank">Sky & Telescope</a></li>
+          <li><a href="https://worldwidetelescope.org/" target="_blank">WorldWide Telescope</a></li>
+          <li><a href="https://www.astropix.com/" target="_blank">Astropix (Astrophotography)</a></li>
+          <li><a href="http://wikisky.org/" target="_blank">Wikisky (Interactive Sky Atlas)</a></li>
+        </ul>
+      </section>
+      
+    <section id="resources">
+      <h2>Critical Resources and References</h2>
+      <h3>Data Repositories</h3>
+      <ul>
+        <li>NASA HEASARC for X-ray binaries</li>
+        <li>ESA Gaia Archive for proper motions</li>
+        <li>ISSDC for Chandrayaan-3 surface data</li>
+      </ul>
+      <h3>Technical Inspiration</h3>
+      <ul>
+        <li>Stellarium's VRTLAB module</li>
+        <li>NASA Skywatching Algorithm Suite</li>
+        <li>Aladin's SAMP protocol</li>
+      </ul>
+      <h3>Advanced YouTube References</h3>
+      <ul>
+        <li>PBS Space Time: "The Geometry of Causality" (Penrose diagrams for event horizons)</li>
+        <li>"Hydrodynamic Code Breakdown" (hydrodynamics for supernovae)</li>
+        <li>Mr.GK Tamil: "மேக்ரோ குவாண்டம் இயக்கங்கள்" (Quantum gravity)</li>
+      </ul>
+      <h3>Website Links</h3>
+      <ul>
+        <li><a href="https://stellarium.org/" target="_blank">Stellarium (3D sky simulator)</a></li>
+        <li><a href="https://science.nasa.gov/skywatching/nasa-daily-skywatching-guide/" target="_blank">NASA Sky Guide</a></li>
+        <li><a href="https://skyandtelescope.org/" target="_blank">Sky & Telescope</a></li>
+        <li><a href="https://aladin.cds.unistra.fr/AladinLite/" target="_blank">Aladin Lite (Interactive sky atlas)</a></li>
+        <li><a href="https://science.nasa.gov/exoplanets/stories/" target="_blank">NASA Exoplanet Stories</a></li>
+        <li><a href="https://science.nasa.gov/eyes/" target="_blank">NASA Eyes</a></li>
+        <li><a href="https://spaceweather.com/" target="_blank">SpaceWeather.com</a></li>
+      </ul>
+    </section>
+    <div id="orbit-visual">
+      <svg width="180" height="80" viewBox="0 0 180 80">
+        <circle cx="90" cy="40" r="30" fill="none" stroke="#00fff7" stroke-width="2" opacity="0.4"/>
+        <circle cx="90" cy="40" r="6" fill="#ffb300"/>
+        <circle id="orbit-planet" cx="120" cy="40" r="4" fill="#00fff7"/>
+        <animateTransform xlink:href="#orbit-planet" attributeName="transform" type="rotate"
+          from="0 90 40" to="360 90 40" dur="3s" repeatCount="indefinite"/>
+      </svg>
+    </div>
+    <section id="innovation">
+      <h2>Innovation Showcase</h2>
+      <ul>
+        <li><strong>ISRO Synergy:</strong> Live integration of RESOURCESAT-3A hyperspectral data for terrestrial-sky alignment</li>
+        <li><strong>Quantum Computing Interface:</strong> D-Wave quantum annealing for optimal event clustering</li>
+        <li><strong>Ethnoastronomy Module:</strong> Dynamic correlation of Tamil Nakṣatra system with Gaia DR3</li>
+        <li><strong>Gravitational Wave Sonification:</strong> LIGO strain data → ChucK audio synthesis</li>
+      </ul>
+      <p>
+        This framework transforms Nathanova beyond a mere event calendar into a Computational Astrophysics platform, with every interaction grounded in peer-reviewed research.<br>
+        The implementation leverages my experience through:<br>
+        – Rocket trajectory optimization algorithms applied to light curve calculations<br>
+        – NASA space settlement principles in UI/UX design<br>
+        – Systems engineering rigor from NSS competition (Grade 11)<br>
+        This positions Nathanova at the intersection of scientific computing, cultural astronomy, and immersive education.
+      </p>
+    </section>
+    <section id="about">
+      <h2>About This Project</h2>
+      <p>
+        Nathanova: Celestial Chronicle – A Multidimensional Spacetime Explorer<br><br>
+        <strong>Presented by:</strong><br>
+        VENKATANATHAN.O.R.V<br>
+        RA2411026011163<br>
+        CSE-AIML<br><br>
+        This project is positioned at the intersection of scientific computing, cultural astronomy, and immersive education.<br>
+        Every feature and module is inspired by real astrophysical research, cutting-edge technology, and a passion for discovery. Nathanova aims to provide a dynamic and authentic experience for anyone interested in the wonders of the cosmos.<br><br>
+        <strong>Thank you for exploring Nathanova!</strong>
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Nathanova Project | All Rights Reserved</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+  

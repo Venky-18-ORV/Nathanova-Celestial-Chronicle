@@ -1,0 +1,388 @@
+/* Import advanced, space and science fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+/* Base settings */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 70% 30%, #23234a 0%, #101024 80%), 
+              url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #e0e6f0;
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  letter-spacing: 0.02em;
+  transition: background 1s;
+}
+
+/* Animated starfield overlay */
+body::before {
+  content: "";
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.15;
+  animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.10; }
+  100% { opacity: 0.20; }
+}
+
+/* HEADER: Futuristic, glowing, bold */
+header {
+    background: rgba(20, 20, 50, 0.95);
+    padding: 2.2em 1em 1.2em 1em;
+    text-align: center;
+    border-bottom: 2.5px solid #00fff7;
+    box-shadow: 0 2px 32px #00fff799, 0 2px 24px #000a;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.6em;
+    font-family: 'Orbitron', Arial, sans-serif;
+    color: #00fff7;
+    letter-spacing: 2.5px;
+    text-shadow: 0 0 18px #00fff7cc, 0 0 2px #fff, 0 0 42px #0ff2;
+    font-weight: 900;
+    line-height: 1.15;
+  }
+  header p {
+    margin: 0.7em 0 0 0;
+    font-size: 1.15em;
+    color: #b5d6ff;
+    font-family: 'Space Mono', 'Share Tech Mono', monospace;
+    letter-spacing: 1px;
+    text-shadow: 0 0 7px #00fff7aa;
+  }
+  
+  /* NAVIGATION: Techy, sticky, mono font, neon hover */
+  nav {
+    background: rgba(12, 12, 30, 0.98);
+    padding: 0.7em 0 0.7em 0;
+    text-align: center;
+    border-bottom: 1.5px solid #00fff7;
+    box-shadow: 0 1px 12px #00fff766, 0 1px 8px #0006;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav a {
+    color: #00fff7;
+    margin: 0 1.5em;
+    text-decoration: none;
+    font-family: 'Share Tech Mono', 'Space Mono', monospace;
+    font-size: 1.16em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 0.1em 0.3em;
+    border-radius: 5px;
+    transition: color 0.2s, text-shadow 0.25s, background 0.2s;
+    text-shadow: 0 0 8px #0ff7, 0 0 2px #fff;
+    display: inline-block;
+  }
+  nav a:hover, nav a:focus {
+    color: #fff;
+    background: #00fff71a;
+    text-shadow: 0 0 22px #00fff7, 0 0 8px #fff;
+    outline: none;
+  }
+  /* MAIN CONTAINER: glassy, glowing, with smooth shadow */
+main {
+    max-width: 1050px;
+    margin: 2.5em auto 2em auto;
+    padding: 2.2em 2em 2em 2em;
+    background: rgba(24, 24, 48, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 4px 36px #00fff7cc, 0 0 0 2.5px #00fff7 inset, 0 0 60px #000b;
+    backdrop-filter: blur(2.5px);
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* SECTION: with neon border, gradient, and soft background */
+  section {
+    margin-bottom: 2.7em;
+    border-left: 4px solid #00fff7cc;
+    padding: 1.2em 1.2em 1.2em 2em;
+    background: linear-gradient(110deg, rgba(16,16,32,0.64) 80%, rgba(0,255,247,0.04) 100%);
+    border-radius: 10px;
+    box-shadow: 0 2px 14px #00fff733, 0 1px 10px #0004;
+    position: relative;
+  }
+  
+  /* HEADINGS: extra spacey, glowing, different fonts for h2, h3, h4 */
+  h2 {
+    color: #00fff7;
+    border-bottom: 1.5px solid #00fff7cc;
+    padding-bottom: 0.2em;
+    margin-top: 0;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 2em;
+    text-shadow: 0 0 12px #00fff7cc, 0 0 2px #fff;
+    letter-spacing: 2px;
+    font-weight: 900;
+  }
+  
+  h3 {
+    color: #ffb300;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.33em;
+    margin-top: 1.3em;
+    margin-bottom: 0.6em;
+    text-shadow: 0 0 6px #ffb30044, 0 0 1px #fff;
+    letter-spacing: 1.2px;
+  }
+  
+  h4 {
+    color: #7ecfff;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.13em;
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    text-shadow: 0 0 4px #7ecfff99;
+    letter-spacing: 1px;
+  }
+  
+  /* BODY TEXT: modern, readable, with smooth transitions */
+  section p, section ul, section ol {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 1.13em;
+    color: #e0e6f0;
+    line-height: 1.7;
+    margin-bottom: 1.1em;
+    transition: color 0.2s;
+  }
+  
+  /* LISTS: more spacing, techy font for nested lists */
+  ul, ol {
+    margin-left: 2em;
+    margin-bottom: 1.1em;
+  }
+  ul ul, ol ul, ul ol, ol ol {
+    margin-left: 1.5em;
+    font-family: 'Space Mono', monospace;
+    font-size: 1em;
+    color: #b5d6ff;
+  }
+  
+  /* EMPHASIS: for scientific terms */
+  strong, b {
+    color: #00fff7;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  /* CODE/DATA: for technical snippets or data points */
+  code, pre {
+    font-family: 'Space Mono', 'Share Tech Mono', monospace;
+    background: #181830;
+    color: #ffb300;
+    border-radius: 5px;
+    padding: 0.1em 0.4em;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+  }
+  
+  /* BLOCKQUOTE: for research highlights or quotes */
+  blockquote {
+    font-family: 'Share Tech Mono', monospace;
+    background: rgba(0,255,247,0.07);
+    border-left: 4px solid #00fff7;
+    color: #7ecfff;
+    margin: 1.5em 0;
+    padding: 0.9em 1.5em;
+    border-radius: 6px;
+    font-size: 1.06em;
+    box-shadow: 0 0 12px #00fff733;
+  }
+  /* LINKS: neon, smooth underline, different font for references */
+a {
+    color: #00fff7;
+    text-decoration: underline;
+    font-family: 'Share Tech Mono', 'Space Mono', monospace;
+    font-size: 1.05em;
+    transition: color 0.2s, text-shadow 0.2s, text-decoration-color 0.3s;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  a:hover, a:focus {
+    color: #fff;
+    text-shadow: 0 0 12px #00fff7, 0 0 4px #fff;
+    text-decoration-color: #ffb300;
+    outline: none;
+  }
+  
+  /* EVENT CARDS: glowing, scientific, data font */
+  #event-list {
+    margin-top: 1em;
+    padding: 1.1em 1.2em;
+    background: rgba(35, 35, 74, 0.98);
+    border-radius: 10px;
+    min-height: 80px;
+    box-shadow: 0 0 22px #00fff7b0, 0 0 0 2px #00fff7 inset;
+    border: 1.5px solid #00fff7;
+    font-family: 'Space Mono', 'Share Tech Mono', monospace;
+    font-size: 1.08em;
+    position: relative;
+    z-index: 2;
+  }
+  .event h3 {
+    color: #fff;
+    margin-bottom: 0.2em;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 1.1em;
+    text-shadow: 0 0 10px #00fff7, 0 0 2px #fff;
+  }
+  .event p {
+    color: #b5d6ff;
+    font-family: 'Space Mono', monospace;
+    margin-top: 0.1em;
+    margin-bottom: 0.8em;
+  }
+  
+  /* RESPONSIVE: smooth scaling for mobile and tablets */
+  @media (max-width: 1100px) {
+    main {
+      max-width: 98vw;
+      padding: 1em 0.5em;
+    }
+    section {
+      padding: 1em 0.5em 1em 1em;
+    }
+  }
+  @media (max-width: 700px) {
+    header h1 {
+      font-size: 1.5em;
+    }
+    nav a {
+      margin: 0 0.5em;
+      font-size: 1em;
+    }
+    main {
+      padding: 0.7em 0.1em;
+    }
+    section {
+      padding: 0.7em 0.2em 0.7em 0.7em;
+    }
+  }
+  
+  /* FOOTER: subtle neon top border, mono font */
+  footer {
+    background: rgba(20, 20, 50, 0.93);
+    padding: 1em;
+    text-align: center;
+    color: #b5d6ff;
+    margin-top: 2em;
+    font-size: 1em;
+    border-top: 1.5px solid #00fff7;
+    box-shadow: 0 -2px 24px #00fff799;
+    font-family: 'Share Tech Mono', 'Space Mono', monospace;
+    letter-spacing: 1px;
+  }
+
+
+  #cosmic-loader svg {
+    display: block;
+  }
+  body.loaded #cosmic-loader {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #menu-toggle {
+    display: none;
+    position: fixed;
+    top: 18px;
+    right: 22px;
+    z-index: 100;
+    background: rgba(24,24,48,0.95);
+    border: 2px solid #00fff7;
+    border-radius: 50%;
+    padding: 7px;
+    box-shadow: 0 2px 12px #00fff7bb;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  #menu-toggle:hover {
+    background: #00fff71c;
+    box-shadow: 0 4px 18px #00fff7ee;
+  }
+  @media (max-width: 700px) {
+    #menu-toggle { display: block; }
+    nav { display: none; }
+    nav.open { display: block; position: fixed; top: 65px; left: 0; width: 100vw; background: rgba(16,16,32,0.98); }
+  }
+
+  /* INTERACTIVE MODULE CARDS */
+.module-card {
+    background: linear-gradient(120deg, #181830 70%, #00fff71a 100%);
+    border: 2px solid #00fff7cc;
+    border-radius: 12px;
+    box-shadow: 0 2px 18px #00fff766, 0 0 0 2px #ffb30099 inset;
+    padding: 1.3em 1.2em;
+    margin-bottom: 1.5em;
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .module-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px #00fff7cc, 0 0 0 4px #ffb300cc inset;
+    background: linear-gradient(120deg, #23234a 70%, #00fff733 100%);
+  }
+  .module-card h3 {
+    font-family: 'Orbitron', Arial, sans-serif;
+    color: #ffb300;
+    margin-top: 0;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 8px #ffb30077;
+  }
+  .module-card ul {
+    font-family: 'Space Mono', monospace;
+    color: #b5d6ff;
+    margin-bottom: 0;
+  }
+  
+  #event-list {
+    margin-top: 1em;
+    padding: 1.2em 1.2em;
+    background: rgba(35, 35, 74, 0.98);
+    border-radius: 12px;
+    box-shadow: 0 0 22px #00fff7b0, 0 0 0 2px #00fff7 inset;
+    border: 1.5px solid #00fff7;
+    font-family: 'Space Mono', 'Share Tech Mono', monospace;
+    font-size: 1.09em;
+  }
+  #event-list .event {
+    background: rgba(0,255,247,0.07);
+    border-left: 3px solid #00fff7cc;
+    margin-bottom: 1em;
+    padding: 0.7em 1em;
+    border-radius: 7px;
+    box-shadow: 0 2px 12px #00fff733;
+    transition: background 0.2s;
+  }
+  #event-list .event:hover {
+    background: rgba(0,255,247,0.15);
+  }
+  #event-list h4 {
+    font-family: 'Orbitron', Arial, sans-serif;
+    color: #ffb300;
+    margin: 0 0 0.3em 0;
+    font-size: 1.13em;
+    text-shadow: 0 0 7px #ffb30077;
+  }
+  
+  
+  
+  
+  
